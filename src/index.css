@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap");
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 :root {
   font-family: "Lato", sans-serif;
@@ -9,66 +8,44 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #ffa764;
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: #f2da53;
-}
-
 body {
-  margin: 0;
-  padding: 2rem;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
 
 h1 {
   font-size: 3.2em;
-  line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid #03546c;
-  padding: 0.3rem 1rem;
-  height: 2rem;
-  font-size: 0.8em;
+a {
   font-weight: 500;
-  font-family: inherit;
-  background-color: transparent;
-  cursor: pointer;
-  color:#03546c;
-  transition: border-color 0.25s;
+  color: #005872;
+  text-decoration: inherit;
 }
 
-button:hover {
-  border-color: #ffa764;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+a:hover {
+  color: #0095c3;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #ffa764;
+    color: #0095c3;
     background-color: #ffffff;
   }
   a:hover {
-    color: #f2da53;
+    color: #005872;
   }
   button {
     background-color: #f9f9f9;

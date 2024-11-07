@@ -1,11 +1,42 @@
+/* Card overal */
 .card {
   background: #f3f3f3;
   border-radius: 5px;
   color: #333;
   padding: 1rem;
-  width: 400px;
+  width: 360px;
   position: relative;
 }
+
+.card p {
+  text-align: left;
+}
+
+.card::before {
+  content: "";
+  display: block;
+  background-color: green;
+  border-radius: 5px 5px 0 0;
+  height: 5px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.card.web::before {
+  background-color: #ffa200;
+}
+
+.card.game::before {
+  background-color: #006280;
+}
+
+.card.default::before {
+  background-color: #939393;
+}
+
+/* Card header part*/
 
 .card-header {
   position: relative;
@@ -48,7 +79,7 @@
   display: inline-block;
   position: absolute;
   right: 0;
-  top: 1rem;
+  top: 1.5rem;
   width: 200px;
   background-color: #333;
   color: #fefefe;
@@ -58,6 +89,7 @@
   font-size: 0.8rem;
 }
 
+/* Card main area part*/
 .card-content {
   display: flex;
   align-items: flex-start;
@@ -67,6 +99,7 @@
 .card-data {
   flex: 2;
 }
+
 .card-image {
   flex: 1;
   align-self: end;
@@ -84,6 +117,7 @@
   font-weight: 300;
   font-size: 0.8rem;
   margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 .department,
@@ -94,12 +128,15 @@
   margin: inherit;
 }
 
+/* Card footer part*/
+
 .card-footer {
   display: flex;
   justify-content: space-between;
   align-items: end;
   height: 60px;
 }
+
 .years {
   align-self: end;
   margin: inherit;

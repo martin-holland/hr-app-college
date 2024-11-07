@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "../Button/Button";
 import "./EmployeeCard.css";
 import { calcYearsWorked } from "../../utilis/yearsCalc";
 
@@ -14,8 +15,19 @@ const EmployeeCard = (props) => {
     setRole(!promotedRole);
   };
 
+  const getDepartmentClass = (dept) => {
+    switch (dept) {
+      case "Web Development":
+        return "web";
+      case "Game Development":
+        return "game";
+      default:
+        return "default";
+    }
+  };
+
   return (
-    <div className="card">
+    <div className={`card ${getDepartmentClass(props.department)}`}>
       <div className="card-header">
         <p className="name">{props.name}</p>
         <div className="card-icons">
@@ -60,9 +72,10 @@ const EmployeeCard = (props) => {
         </div>
       </div>
       <div className="card-footer">
-        <button onClick={clickHandler}>
-          {promotedRole ? "Demote" : "Promote"}
-        </button>
+        <Button
+          onClick={clickHandler}
+          text={promotedRole ? "Demote" : "Promote"}
+        />
         <p className="years">
           {yearsWorked} <span className="text">years in school </span>
           <span className="date">({props.startDate})</span>
