@@ -24,9 +24,15 @@ button {
     outline: 4px auto #0095c3 none;
   }
 
+  button.primary {
+    background-color: #0095c3;
+  }
+  button.secondary {
+    background-color: #ff0000;
+  }
+
   @media (prefers-color-scheme: light) {
     button {
       background-color: #f9f9f9;
     }
   }
-  
